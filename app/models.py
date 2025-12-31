@@ -37,6 +37,9 @@ class Artwork(Base):
     material = Column(String)
     dimensions = Column(String)
 
+    created_year = Column(Integer)
+    description = Column(String, nullable=True)
+
     creator_id = Column(Integer, ForeignKey("creators.id"))
     storage_place_id = Column(Integer, ForeignKey("storage_places.id"))
 
